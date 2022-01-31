@@ -3,6 +3,7 @@ from keras import datasets
 #from tensorflow.python.keras impordatasets
 from numpy import array
 from numpy.linalg import norm
+import pickle
 
 import IISL_FLpkg.model_generator as mg
 
@@ -29,8 +30,8 @@ p_accuracy_list = []
 gradient_avg = 0
 
 
-for iter in range(3):
-  for i in range(600):
+for iter in range(1):
+  for i in range(10):
     x = x_train[100*(i):100*(i+1)]
     y = y_train[100*(i):100*(i+1)]
 
@@ -51,9 +52,15 @@ for iter in range(3):
     # rq_loss_list.append(rq_results[0])
     # rq_accuracy_list.append(rq_results[1])
 
-    if(i % 1 == 0):
+    if(i % 100 == 0):
       print("iteration : ", iter, ", i : ", i)
       print("loss : %.7f, sca : %.7f" %( results[0], results[1]))
       print("[P]loss : %.7f, sca : %.7f" %( p_results[0], p_results[1]))
     #   print("[R]loss : %.7f, sca : %.7f" %( r_results[0], r_results[1]))
     #   print("[RQ]loss : %.7f, sca : %.7f" %( rq_results[0], rq_results[1]))
+    
+with open("./acc_list/OFedAvg.pkl","wb") as f:
+    pickle.dump(accuracy_list, f)
+    
+with open("./acc_list/OFedPA.pickle","wb") as f:
+    pickle.dump(p_accuracy_list, f)
