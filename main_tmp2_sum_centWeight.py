@@ -33,8 +33,8 @@ accuracy_list = []
 p_accuracy_list = []
 rp_accuracy_list = []
 
-for iter in range(1):
-  for i in range(10):
+for iter in range(4):
+  for i in range(600):
     x = x_train[100*(i):100*(i+1)]
     y = y_train[100*(i):100*(i+1)]
 
