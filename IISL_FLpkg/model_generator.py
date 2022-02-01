@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 from keras import layers, models
 
-from .model_custom_sum_centWeight import CustomModelList, CustomModel
+from .model_custom import CustomModelList, CustomModel
 
 
 def model_generation(N, metric):
