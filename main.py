@@ -69,8 +69,8 @@ for iter in range(4):
 # with open("./Accuracy_lists/OFedAvg_sum_centWeight_L.pkl","wb") as f:
 #     pickle.dump(accuracy_list, f)
     
-with open("./Accuracy_lists/OFedPA_p_sum_centWeight_L.pkl","wb") as f:
+with open("./Accuracy_lists/OFedIT_p_sum_centWeight_L.pkl","wb") as f:
     pickle.dump(p_accuracy_list, f)
     
-with open("./Accuracy_lists/OFedPA_rp_sum_centWeight_L.pkl","wb") as f:
+with open("./Accuracy_lists/OFedIT_rp_sum_centWeight_L.pkl","wb") as f:
     pickle.dump(rp_accuracy_list, f)
