@@ -6,7 +6,7 @@ from .model_custom_non_iid import CustomModelList, CustomModel
 
 
 def model_generation(N, metric):
-    random_seed = 3
+    random_seed = 1
     tf.random.set_seed(random_seed)
   
     all_models = CustomModelList()

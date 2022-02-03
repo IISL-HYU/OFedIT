@@ -56,7 +56,7 @@ rp2_accuracy_list = []
 
 
 for iter in range(4):
-  for i in range(30):
+  for i in range(600):
     x = np.concatenate([x_train_iid[50*(i):50*(i+1)], x_train_niid[50*(i):50*(i+1)]])
     y = np.concatenate([y_train_iid[50*(i):50*(i+1)], y_train_niid[50*(i):50*(i+1)]])
 
@@ -84,7 +84,7 @@ for iter in range(4):
     # rq_loss_list.append(rq_results[0])
     # rq_accuracy_list.append(rq_results[1])
 
-    if(i % 10 == 0):
+    if(i % 100 == 0):
       print("iteration : ", iter, ", i : ", i)
       print("loss : %.7f, sca : %.7f" %( results[0], results[1]))
       print("[P]loss : %.7f, sca : %.7f" %( p_results[0], p_results[1]))
